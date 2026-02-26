@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login | SpendWise</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-bg login-bg">
+
+<div class="auth-card">
+  <h2>Login</h2>
+
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+
+  <p id="msg" style="margin-top:10px;"></p>
+
+
+  <button onclick="loginUser()">Login</button>
+
+
+
+  <div class="auth-links">
+    <a href="register.html">Create Account</a>
+    <a href="forgot-password.html">Forgot Password?</a>
+ </div>
+
+</div>
+<script>
+function loginUser() {
+  const email = document.getElementById("email").value.trim().toLowerCase();
+  const password = document.getElementById("password").value.trim();
+  const msg = document.getElementById("msg");
+
+  const users = JSON.parse(localStorage.getItem("users")) || {};
+  const user = users[email];
+
+  if (!user) {
+    msg.style.color = "red";
+    msg.innerText = "No account found. Please register.";
+    return;
+  }
+
+  if (user.password !== password) {
+    msg.style.color = "red";
+    msg.innerText = "Incorrect email or password";
+    return;
+  }
+
+  localStorage.setItem("isLoggedIn", "true");
+  localStorage.setItem("currentUser", email);
+
+  msg.style.color = "green";
+  msg.innerText = "Login successful!";
+
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 500);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpendWise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <h2 class="logo">💰 SpendWise</h2>
+
+    <button class="nav-btn active" data-target="dashboard">Dashboard</button>
+    <button class="nav-btn" data-target="history">History</button>
+    <button class="nav-btn" data-target="limits">Limits</button>
+    <button class="nav-btn" data-target="analytics">Analytics</button>
+
+    <button id="logoutBtn" class="logout">Logout</button>
+  </aside>
+
+  <main class="main">
+
+    <section id="dashboard" class="section show">
+      <div class="card">
+        <h3>Add Expense</h3>
+        <form id="expenseForm">
+          <input id="title" placeholder="Title" required>
+          <input id="category" placeholder="Category" required>
+          <input id="amount" type="number" placeholder="Amount" required>
+          <button class="primary">Add Expense</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="history" class="section">
+      <div class="card">
+        <h3>History</h3>
+        <div id="expenseList"></div>
+      </div>
+    </section>
+
+    <section id="limits" class="section">
+      <div class="card">
+        <h3>Limits</h3>
+        <form id="limitForm">
+          <input type="month" id="limitMonth" required>
+          <input id="limitCategory" placeholder="Category" required>
+          <input type="number" id="limitAmount" placeholder="Limit" required>
+          <button class="warning">Save Limit</button>
+        </form>
+        <div id="limitList"></div>
+      </div>
+    </section>
+
+    <section id="analytics" class="section">
+      <div class="card analytics-card">
+        <h3>Analytics</h3>
+        <select id="yearSelect"></select>
+        <canvas id="expenseChart"></canvas>
+        <p id="expenseSummary"></p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
