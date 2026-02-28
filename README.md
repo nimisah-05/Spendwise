@@ -1,22 +1,25 @@
 # SpendWise 💰
 
-SpendWise is a Public Finance Tracker application built using Java and Spring Boot.  
-It allows users to manage their expenses, track spending, and handle authentication securely.
+SpendWise is a Full Stack Public Finance Tracker application built using Java, Spring Boot, HTML, CSS, and JavaScript.
+
+It allows users to register, login, manage expenses, and securely reset passwords through an integrated frontend and backend system.
 
 ---
 
 ## 🚀 Features
 
-- User Registration & Login
-- Expense Management (Add, View, Delete)
+- User Registration & Login (Authentication System)
+- Expense Management (Add, View, Delete Expenses)
 - Password Reset Functionality
 - REST API based backend
 - H2 Database Integration
+- Integrated Frontend using HTML, CSS & JavaScript
 
 ---
 
 ## 🛠 Tech Stack
 
+### 🔹 Backend
 - Java
 - Spring Boot
 - Spring Web
@@ -24,22 +27,38 @@ It allows users to manage their expenses, track spending, and handle authenticat
 - H2 Database
 - Maven
 
+### 🔹 Frontend
+- HTML
+- CSS
+- JavaScript
+
 ---
 
 ## ▶️ How to Run the Project
 
 1. Clone the repository:
-git clone https://github.com/nimisah-05/Spendwise.git
 
+```
+git clone https://github.com/nimisah-05/Spendwise.git
+```
 
 2. Navigate into the project folder:
-   cd Spendwise
-   
+
+```
+cd Spendwise
+```
+
 3. Run the project:
+
+```
 mvn spring-boot:run
+```
 
 4. Open in browser:
+
+```
 http://localhost:8083/index.html
+```
 
 ---
 
@@ -56,4 +75,7 @@ http://localhost:8083/index.html
 ## 👩‍💻 Author
 
 Nimi  
-BTech CSE | Backend Developer (Spring Boot)
+BTech CSE | Full Stack Developer (Spring Boot)
+
+
+
