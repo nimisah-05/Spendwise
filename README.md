@@ -50,6 +50,20 @@ cd Spendwise
 
 3. Run the project:
 
+If you are using Windows (PowerShell):
+
+```
+.\mvnw.cmd spring-boot:run
+```
+
+If you are using Mac/Linux:
+
+```
+./mvnw spring-boot:run
+```
+
+Or if Maven is installed globally:
+
 ```
 mvn spring-boot:run
 ```
