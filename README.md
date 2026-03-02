@@ -71,7 +71,7 @@ mvn spring-boot:run
 4. Open in browser:
 
 ```
-http://localhost:8083/index.html
+http://localhost:8080/index.html
 ```
 
 ---
