@@ -1,0 +1,5 @@
+firstly run in terminal use :- .\mvnw.cmd spring-boot:run
+
+Then go to browser and search this url :- http://localhost:8083/index.html
+http://localhost:8083/login.html
+http://localhost:8083/index.html
